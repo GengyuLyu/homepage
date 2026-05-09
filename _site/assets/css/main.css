@@ -68,3 +68,66 @@ li {list-style-type:none;}
 	float:right;
 	width:80%;
 }
+
+/* Section navigation buttons */
+.section-nav{
+	display:flex;
+	flex-wrap:wrap;
+	gap:12px;
+	margin:24px 0 8px;
+	padding:0;
+}
+.section-btn{
+	flex:1 1 auto;
+	min-width:180px;
+	padding:12px 20px;
+	font-size:16px;
+	font-weight:500;
+	color:#1976D2;
+	background:#fff;
+	border:2px solid #1976D2;
+	border-radius:6px;
+	cursor:pointer;
+	transition:all 0.2s ease;
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	gap:8px;
+	font-family:inherit;
+}
+.section-btn:hover{
+	background:#e8f1fb;
+	color:#0d47a1;
+	border-color:#0d47a1;
+	transform:translateY(-1px);
+	box-shadow:0 2px 6px rgba(25,118,210,0.18);
+}
+.section-btn:focus{
+	outline:none;
+	box-shadow:0 0 0 3px rgba(25,118,210,0.25);
+}
+.section-btn.active{
+	background:#1976D2;
+	color:#fff;
+	border-color:#1976D2;
+	box-shadow:0 2px 8px rgba(25,118,210,0.3);
+}
+.section-btn.active:hover{
+	background:#0d47a1;
+	color:#fff;
+}
+.section-btn .fa{
+	font-size:15px;
+}
+
+/* Collapsible sections */
+.collapsible-section[hidden]{
+	display:none !important;
+}
+.collapsible-section{
+	animation:fadeIn 0.3s ease-in;
+}
+@keyframes fadeIn{
+	from{opacity:0;transform:translateY(-4px);}
+	to{opacity:1;transform:translateY(0);}
+}
